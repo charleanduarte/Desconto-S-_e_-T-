@@ -1,0 +1,24 @@
+print('\033[33m#--#--#--#\033[m'*12)
+#exemplo de desconto em folha de pagamento do valor bruto!
+salario = float(input('\033[34mQual é o valor do salário?\033[m '))
+mesT = salario/30
+print('Dia trabalhado: \033[4;33mR${:.2f}\033[m'.format(mesT))
+
+descontoT = float(input('\033[31mQuantas faltas ? \033[m'))
+descontT = descontoT*mesT
+print('Você terá um desconto na folha de  \033[4;33mR${:.2f}\033[m'.format(descontT))
+
+auxilio = float(input('\033[34mQual é o valor do ticket?\033[m  '))
+dia = auxilio/22  #aqui o dia pode variar
+print('Dia ticket: \033[4;33mR${:.2f}\033[m'.format(dia))
+
+falta = float(input('Quantas faltas:?'))
+faltaT = falta*dia
+print('O seu deconto será de \033[4;33mR$ {:.2f}\033[m'.format(faltaT))
+#um pequeno exemplo de desconto de ticket de alimentação
+#falta ticket é de acordo com falta trabalho
+
+d = descontT+faltaT
+s = salario+auxilio
+print('O salário e o ticket é de \033[33m{:.2f}\033[m faltas:! \033[33m{:.2f}\033[m'.format(s,d))
+
